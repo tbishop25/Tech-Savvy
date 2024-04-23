@@ -7,14 +7,15 @@ client = OpenAI()
 # client = OpenAI(
 #   api_key=os.environ.get("CUSTOM_ENV_NAME"),
 # )
-from openai import OpenAI
-client = OpenAI()
+
 
 
 messages = [
-    {"role": "system", "content": "You are a kind helpful assistant."},
+    {"role": "system", "content": "You are a kind helpful assistant that assists with problems in Microsoft Word."},
+    {"role": "system", "content": "You ONLY assist people with Word."},
+    {"role": "system", "content": "If a user ask about any else, redirect them to word help."},
 ]
-
+# create exit condition
 while True:
     message = input("User : ")
     if message:
@@ -24,7 +25,10 @@ while True:
         chat = client.chat.completions.create(
             model="gpt-3.5-turbo", messages=messages
         )
-    
+    else:print("Exit")
     reply = chat.choices[0].message.content
-    print(f"TSBot: {reply}")
     messages.append({"role": "assistant", "content": reply})
+    print(f"TSBot: {reply}")
+    
+
+    

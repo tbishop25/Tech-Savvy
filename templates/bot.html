@@ -1,57 +1,7 @@
-<!-- <html>
-    <head>
-        <title> 
-            Welcome to TechSavvy!
-        </title>
-        <body>
-            <h1>Welcome to TechSavvy's bot page!</h1>
-            <p>This is the page for interacting with the chatbot!</p>
-        </body>
-    </head>
-</html> -->
-<!-- <!doctype html>
-<html>
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>{% block title %}{% endblock %}</title>
-</head>
-<body
-style="background-color:lavender;"></body>>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">TechSavvy</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	     <span class="navbar-toggler-icon"></span>
-	 </button>
-         <div class="collapse navbar-collapse" id="navbarNav">
-             <ul class="navbar-nav">
-	         <li class="nav-item active">
-                     <a class="nav-link" href="http://127.0.0.1:5000/">Landing Page <span class="sr-only">(current)</span></a>
-		</li>
-		<li class="nav-item">
-		    <a class="nav-link" href="http://127.0.0.1:5000/options">Options Page</a>
-		</li>
-		<li class="nav-item">
-		    <a class="nav-link" href="http://127.0.0.1:5000/bot">Chatbot Page</a>
-		</li>
-	    </ul>
-        </div>
-    </nav>
-    <p ></p>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-    <p style="font-family: 'Courier New', Courier, monospace;font-size: 22px;text-align:center">&nbsp;&nbsp;&nbsp;Welcome to TechSavvy! You are on the chatbot page!
-    </p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-    
-    
-    {% block content %}
-    {% endblock %}
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-</html> -->
 
 
-<!DOCTYPE html>
+<!-- Placeholder code from base -->
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>TechSavvy</title>
@@ -61,30 +11,29 @@ style="background-color:lavender;"></body>>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
     }
     
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    
     .row.content {height: 650px}
     
-    /* Set gray background color and 100% height */
     .sidenav {
       padding-top: 20px;
       background-color: #eea5ec;
       height: 100%;
     }
     
-    /* Set black background color, white text and some padding */
+ 
     footer {
       background-color: #e1d0e1;
       color: rgb(10, 2, 2);
       padding: 15px;
     }
     
-    /* On small screens, set height to 'auto' for sidenav and grid */
+  
     @media screen and (max-width: 767px) {
       .sidenav {
         height: auto;
@@ -135,8 +84,270 @@ style="background-color:lavender;"></body>>
     </div>
   </div>
 </div>
+</body>
+</html> -->
+<!DOCTYPE html>
 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TSBot</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<!-- REMEMBER: Dr. Hayes said make background look techy instead of purple -->
+<style>
+    :root {
+  --body-bg: linear-gradient(135deg, #090909 30%, #4f2e57 40%, #e59ef4 70%,#dfd2e1 90% );
+  --msger-bg: #fff;
+  --border: 2px solid #ddd;
+  --left-msg-bg: #ececec;
+  --right-msg-bg: #579ffb;
+  
+}
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: var(--body-bg);
+  font-family: Helvetica, sans-serif;
+}
+
+.msger {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 867px;
+  margin: 25px 10px;
+  height: calc(100% - 50px);
+  border: var(--border);
+  border-radius: 5px;
+  background: var(--msger-bg);
+  box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
+}
+
+.msger-header {
+  font-size: medium;
+  justify-content: space-between;
+  padding: 10px;
+  text-align: center;
+  border-bottom: var(--border);
+  background: #eee;
+  color: #666;
+}
+
+.msger-chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+}
+.msger-chat::-webkit-scrollbar {
+  width: 6px;
+}
+.msger-chat::-webkit-scrollbar-track {
+  background: #ddd;
+}
+.msger-chat::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+}
+.msg {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.msg-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background: #ddd;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+.msg-bubble {
+  max-width: 450px;
+  padding: 15px;
+  border-radius: 15px;
+  background: var(--left-msg-bg);
+}
+.msg-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.msg-info-name {
+  margin-right: 10px;
+  font-weight: bold;
+}
+.msg-info-time {
+  font-size: 0.85em;
+}
+
+.left-msg .msg-bubble {
+  border-bottom-left-radius: 0;
+}
+
+.right-msg {
+  flex-direction: row-reverse;
+}
+.right-msg .msg-bubble {
+  background: var(--right-msg-bg);
+  color: #d9f07f;
+  border-bottom-right-radius: 0;
+}
+.right-msg .msg-img {
+  margin: 0 0 0 10px;
+}
+
+.msger-inputarea {
+  display: flex;
+  padding: 10px;
+  border-top: var(--border);
+  background: #eee;
+}
+.msger-inputarea * {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+}
+.msger-input {
+  flex: 1;
+  background: #ddd;
+}
+.msger-send-btn {
+  margin-left: 10px;
+  background: rgb(0, 196, 65);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.23s;
+}
+.msger-send-btn:hover {
+  background: rgb(0, 180, 50);
+}
+
+.msger-chat {
+  background-color: #fcfcfe;
+  }
+
+.btn-primary{
+  margin-left: 10px;
+  background: rgb(0, 196, 65);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.23s;
+}
+
+.btn-primary:hover {
+  background: rgb(0, 180, 50);
+}
+</style>
+<body>
+ 
+    <section class="msger">
+    <header class="msger-header">
+      <div class="msger-header-title">
+        <i class="fa-regular fa-face-smile"></i></i> TSBot <i class="fa-regular fa-face-smile"></i>
+      </div>
+    </header>
+
+    <main class="msger-chat">
+      
+    </main>
+
+    
+
+    <form class="msger-inputarea" id="messageForm">
+      <input type="text" class="msger-input" id="msgInput" placeholder="Enter your message...">
+      <button type="submit" class="msger-send-btn">Send</button>
+      <a class="btn btn-primary" href="http://127.0.0.1:5000/" role="button">Back to Home</a>
+      <a class="btn btn-primary" href="http://127.0.0.1:5000/options" role="button">Need Inspo</a>
+      
+    </form>
+  </section>
+  
+  <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+  <script>
+    // JavaScript starts
+    
+    function addMessageToScreen(name, img, side, text) {
+      const chat_message = document.querySelector(".msger-chat");
+      const message_html_pop_up = `
+        <div class="msg ${side}-msg">
+          <div class="msg-img" style="background-image: url(${img})"></div>
+          <div class="msg-bubble">
+            <div class="msg-info">
+              <div class="msg-info-name">${name}</div>
+            </div>
+            <div class="msg-text">${text}</div>
+          </div>
+        </div>
+      `;
+      chat_message.insertAdjacentHTML("beforeend", message_html_pop_up);
+      chat_message.scrollTop += 500; 
+    }
+
+    
+    
+    const BOT_IMG = "C:\Users\Landon Bishop\Downloads\robot.png";
+    const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
+    const BOT_NAME = "TSBot";
+    const PERSON_NAME = "You";
+
+   
+const msgerForm = document.querySelector("#messageForm");
+msgerForm.addEventListener("submit", function(event) {
+  event.preventDefault(); 
+  const userMessage = document.querySelector("#msgInput").value.trim(); 
+  if (userMessage === "") return; 
+
+  
+  addMessageToScreen(PERSON_NAME, PERSON_IMG, "right", userMessage);
+
+ 
+  fetch("/get", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ message: userMessage }) 
+  })
+  .then(response => response.json())
+  .then(data => {
+    
+    addMessageToScreen(BOT_NAME, BOT_IMG, "left", data.reply); 
+  })
+  .catch(error => console.error("Error:", error));
+
+ 
+  document.querySelector("#msgInput").value = "";
+});
+
+  </script>
 
 </body>
+
 </html>

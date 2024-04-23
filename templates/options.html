@@ -1,56 +1,3 @@
-<!-- <html>
-    <head>
-        <title>Welcome to TechSavvy
-             </title>
-        <body>
-            <h1>
-                Welcome to TechSavvy's options page!!</h1>
-            <p>This is the page for selecting which option you want to use!</p>
-        </body>
-    </head>
-</html> -->
-
-<!-- <!doctype html>
-<html>
-<head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>{% block title %}{% endblock %}</title>
-</head>
-<body 
-style="background-color:lavender;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">TechSavvy</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	     <span class="navbar-toggler-icon"></span>
-	 </button>
-         <div class="collapse navbar-collapse" id="navbarNav">
-             <ul class="navbar-nav">
-	         <li class="nav-item active">
-                     <a class="nav-link" href="http://127.0.0.1:5000/">Landing Page <span class="sr-only">(current)</span></a>
-		</li>
-		<li class="nav-item">
-		    <a class="nav-link" href="http://127.0.0.1:5000/options">Options Page</a>
-		</li>
-		<li class="nav-item">
-		    <a class="nav-link" href="http://127.0.0.1:5000/bot">Chatbot Page</a>
-		</li>
-	    </ul>
-        </div>
-    </nav>
-    <p></p>>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-    <p style="font-family: 'Courier New', Courier, monospace;font-size: 22px;text-align:center">&nbsp;&nbsp;&nbsp;Welcome to TechSavvy!You are on the options page!
-    </p>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-    <a class="btn btn-primary" href="http://127.0.0.1:5000/bot" role="button">Advance to next page</a>
-    {% block content %}
-    {% endblock %}
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-</html> -->
-
-
 
 <!DOCTYPE html>
 
@@ -63,30 +10,33 @@ style="background-color:lavender;">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    
+  
+  
+    
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
     }
     
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 650px}
+  
+    .row.content {height: 950px}
     
-    /* Set gray background color and 100% height */
+    
     .sidenav {
       padding-top: 20px;
       background-color: #eea5ec;
       height: 100%;
     }
     
-    /* Set black background color, white text and some padding */
+   
     footer {
       background-color: #e1d0e1;
       color: rgb(10, 2, 2);
       padding: 15px;
     }
     
-    /* On small screens, set height to 'auto' for sidenav and grid */
+    
     @media screen and (max-width: 767px) {
       .sidenav {
         height: auto;
@@ -125,18 +75,53 @@ style="background-color:lavender;">
     <div class="col-sm-2 sidenav">
     </div>
     <div class="col-sm-8 text-left"> 
-      <h1>Welcome</h1>
-      <p>You are on the options page.</p>
+      <h1>Options Page</h1>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <p>Currently, the options for the Tech Savvy chtbot include assistance with Microsoft Word.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      <p>As the project expands, other Office products such as assistance for PowerPoint and Excel will be available.</p>
       <hr>
+      <form>
+        <div class="form-group">
+         
+         
+        </div>
+        <div class="form-group">
+          
+        </div>
+        <div class="form-group">
+    <label for="exampleFormControlSelect2">Need Some Inspo on what to ask? Look at some sample questions below!</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>How do I add alt text to an image?</option>
+      <option>What is Microsoft Word?</option>
+      <option>How do I create a bulleted list?</option>
+      <option>Whatever you need help with in word, TSBot can assist!</option>
+      
+    </select>
+  </div>
+      </form>
+      <hr>
+      <!-- Single button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Navigate to Chatbot <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="http://127.0.0.1:5000/bot">Chatbot</a></li>
+   
+    <li><a href="http://127.0.0.1:5000/">Landing Page</a></li>
+  </ul>
+</div>
     </div>
     <div class="col-sm-2 sidenav">
-      <div class="well">
+      
       </div>
-      <div class="well">
+      
       </div>
     </div>
   </div>
 </div>
+<hr>
 
 
 
